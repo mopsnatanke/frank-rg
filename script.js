@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Функция для отображения просмотра поста
   function showPostView(index) {
     postForm.classList.add('hidden');
-    postView.classList.add('hidden');
+    
     editForm.classList.add('hidden');
 
     const posts = JSON.parse(localStorage.getItem('posts')) || [];
@@ -116,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
   postList.addEventListener('click', (event) => {
     if (event.target.classList.contains('view-post')) {
       const index = event.target.getAttribute('data-index');
+      postView.classList.remove('hidden');
       showPostView(index);
     } else if (event.target.classList.contains('edit-post')) {
       const index = event.target.getAttribute('data-index');
