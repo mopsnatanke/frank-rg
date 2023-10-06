@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+#post-list {
+    padding: 1rem;
+}
+
+#post-form,
+#post-view {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+.hidden {
+    display: none;
+}
