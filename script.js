@@ -17,13 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Функция для отображения списка постов
   function displayPostList() {
-    // Очищаем текущий список
     postList.innerHTML = '';
-
-    // Получаем посты из local storage
     const posts = JSON.parse(localStorage.getItem('posts')) || [];
 
-    // Выводим каждый пост
     posts.forEach((post, index) => {
       const postItem = document.createElement('div');
       postItem.classList.add('post-item');
@@ -50,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Функция для отображения просмотра поста
   function showPostView(index) {
     postForm.classList.add('hidden');
-    postView.classList.remove('hidden');
+    postView.classList.add('hidden');
     editForm.classList.add('hidden');
 
     const posts = JSON.parse(localStorage.getItem('posts')) || [];
@@ -111,14 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
     posts[editIndex].content = content
     posts[editIndex].updated = currentDate
 
-    // const newPost = {
-    //   title,
-    //   content,
-    //   created: currentDate,
-    //   updated: currentDate,
-    // };
-
-    // posts.push(newPost);
     localStorage.setItem('posts', JSON.stringify(posts));
     displayPostList();
     showPostView(posts.length - 1);

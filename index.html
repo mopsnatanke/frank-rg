@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Простой блог</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>Простой блог</h1>
+      <h1>Простой блог</h1>
     </header>
-    <section id="post-list">
-        <!-- Здесь будет выводиться список постов -->
+    <button id="new-post">Создать новый пост</button>
+    <section id="post-view" class="hidden">
+      <h2 id="view-title"></h2>
+      <p id="view-content"></p>
+      <p id="view-created"></p>
+      <p id="view-updated"></p>
     </section>
     <section id="post-form" class="hidden">
-        <h2>Создание поста</h2>
-        <form id="post-form">
-            <input type="hidden" id="post-index">
-            <label for="post-title">Заголовок:</label>
-            <input type="text" id="post-title" required>
-            <label for="post-content">Текст поста:</label>
-            <textarea id="post-content" rows="4" required></textarea>
-            <button id="save-post" type="button">Сохранить</button>
-        </form>
+      <h2>Создание поста</h2>
+      <form id="post-form">
+        <input type="hidden" id="post-index" />
+        <label for="post-title">Заголовок:</label>
+        <input type="text" id="post-title" required />
+        <label for="post-content">Текст поста:</label>
+        <textarea id="post-content" rows="4" required></textarea>
+        <button id="save-post" type="button">Сохранить</button>
+      </form>
     </section>
     <section id="post-edit" class="hidden">
-        <h2>Редактирование поста</h2>
-        <form id="post-edit">
-            <input type="hidden" id="post-index">
-            <label for="edit-title">Заголовок:</label>
-            <input type="text" id="edit-title" required>
-            <label for="edit-content">Текст поста:</label>
-            <textarea id="edit-content" rows="4" required></textarea>
-            <button id="save-edit" type="button">Сохранить изменения</button>
-        </form>
+      <h2>Редактирование поста</h2>
+      <form id="post-edit">
+        <input type="hidden" id="post-index" />
+        <label for="edit-title">Заголовок:</label>
+        <input type="text" id="edit-title" required />
+        <label for="edit-content">Текст поста:</label>
+        <textarea id="edit-content" rows="4" required></textarea>
+        <button id="save-edit" type="button">Сохранить изменения</button>
+      </form>
     </section>
-    <section id="post-view" class="hidden">
-        <h2 id="view-title"></h2>
-        <p id="view-content"></p>
-        <p id="view-created"></p>
-        <p id="view-updated"></p>
+    <section id="post-list">
+      <!-- посты -->
     </section>
-    <button id="new-post">Создать новый пост</button>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
