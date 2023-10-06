@@ -14,13 +14,25 @@
         <!-- Здесь будет выводиться список постов -->
     </section>
     <section id="post-form" class="hidden">
-        <h2>Создание/редактирование поста</h2>
+        <h2>Создание поста</h2>
         <form id="post-form">
+            <input type="hidden" id="post-index">
             <label for="post-title">Заголовок:</label>
             <input type="text" id="post-title" required>
             <label for="post-content">Текст поста:</label>
             <textarea id="post-content" rows="4" required></textarea>
             <button id="save-post" type="button">Сохранить</button>
+        </form>
+    </section>
+    <section id="post-edit" class="hidden">
+        <h2>Редактирование поста</h2>
+        <form id="post-edit">
+            <input type="hidden" id="post-index">
+            <label for="edit-title">Заголовок:</label>
+            <input type="text" id="edit-title" required>
+            <label for="edit-content">Текст поста:</label>
+            <textarea id="edit-content" rows="4" required></textarea>
+            <button id="save-edit" type="button">Сохранить изменения</button>
         </form>
     </section>
     <section id="post-view" class="hidden">
